@@ -6,7 +6,7 @@ public class Parallax : MonoBehaviour {
     private float length, startPosition;
     public GameObject camera;
     public float parallaxEffect;
-
+    
     // Start is called before the first frame update
     void Start() {
         startPosition = transform.position.x;
