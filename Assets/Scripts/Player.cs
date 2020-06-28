@@ -17,6 +17,8 @@ public class Player : MonoBehaviour {
 
     private int attackSequence;
     public Combo[] combos;
+
+    public Attack attack;
     public bool attack1;
     public bool attack2;
     public bool attack3;
@@ -128,10 +130,12 @@ public class Player : MonoBehaviour {
 
     void PlayerHit(Hit hit) {
         comboTimmer = 0;
+        attack.SetAttack(hit);
         anim.SetBool(hit.animation, true);
         startCombo = true;
         currentCombo.Add(hit.inputButton);
         currentHit= hit;
+        
         canHit=true;
     }
 
