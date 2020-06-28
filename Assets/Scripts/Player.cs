@@ -11,8 +11,12 @@ public class Player : MonoBehaviour {
     public Transform isGroundedChecker; 
     public float checkGroundRadius; 
     public LayerMask groundLayer;
-    void Start() {
-        
+
+    private Animator anim;
+    
+    bool isRunning = false;
+        void Start() {
+        anim =  GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,6 +24,11 @@ public class Player : MonoBehaviour {
         Move();
         Jump();
         CheckIfGrounded();
+        anim.SetBool("run", isRunning && isGrounded);
+        anim.SetBool("jump", isGrounded == false);
+        // anim.SetBool("attack1");
+        // anim.SetBool("attack2");
+        // anim.SetBool("attack3");
         
     }
 
@@ -28,9 +37,13 @@ public class Player : MonoBehaviour {
         if(Input.GetKey(KeyCode.RightArrow)){
             pos.x += 0.1f;
             rendererRef.flipX = false;
+            isRunning = true;
         } else if (Input.GetKey(KeyCode.LeftArrow)){
             pos.x += -0.1f;
             rendererRef.flipX = true;
+            isRunning = true;
+        } else {
+            isRunning = false;
         }
         transform.position = pos;
     }
