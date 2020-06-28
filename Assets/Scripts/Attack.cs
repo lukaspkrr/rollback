@@ -5,6 +5,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     // Start is called before the first frame update
+
     private int damage;
     private bool slowDown;
 
@@ -17,6 +18,7 @@ public class Attack : MonoBehaviour
         Damage enemy = other.GetComponent<Damage>();
         if(enemy != null){
             enemy.TakeDamage(damage);
+            ComboManager.instance.SetCombo();
         }
     }
 }
