@@ -3255,6 +3255,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Centipede
       objectReference: {fileID: 0}
+    - target: {fileID: 8343330499392133821, guid: 7ac44b3f19e2093439b4b6636e596c81,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8343330499392133822, guid: 7ac44b3f19e2093439b4b6636e596c81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5088,6 +5093,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BigBloated
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159276577942395584, guid: b9a3b82be22c9a34ba2162c2c91b59be,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7159276577942395585, guid: b9a3b82be22c9a34ba2162c2c91b59be,
         type: 3}
