@@ -4108,6 +4108,13 @@ MonoBehaviour:
       resetTime: 0.5
       damage: 5
       slowDown: 0
+  - hits:
+    - animation: bow
+      inputButton: Fire2
+      animationTime: 0.75
+      resetTime: 0.85
+      damage: 1
+      slowDown: 0
   attack1: 0
   attack2: 0
   attack3: 0
