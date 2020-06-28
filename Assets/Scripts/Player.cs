@@ -30,9 +30,8 @@ public class Player : MonoBehaviour {
         CheckIfGrounded();
         anim.SetBool("run", isRunning && isGrounded);
         anim.SetBool("jump", !isGrounded);
-        anim.SetBool("attack1", attackSequence == 1);
-        anim.SetBool("attack2", attackSequence == 2);
-        anim.SetBool("attack3", attackSequence == 3);
+        CheckInputs();
+
         
     }
 
@@ -70,9 +69,21 @@ public class Player : MonoBehaviour {
         } 
     }
 
-    void AttackCombo() {
-        if(Input.GetKey(KeyCode.Z)){
-            
+    void CheckInputs() {
+        for (int i = 0; i < combos.Length; i++){
+            if (Input.GetButtonDown(combos[i].hits[0].inputButton)){
+                PlayerHit(combos[i].hits[0]);
+                break;
+            }
         }
+    }
+
+    void PlayerHit(Hit hit) {
+        anim.Play(hit.animation);
+
+    }
+
+    void ResetCombo() {
+
     }
 }
