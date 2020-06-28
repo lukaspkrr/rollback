@@ -17,6 +17,16 @@ public class Player : MonoBehaviour {
 
     private int attackSequence;
     public Combo[] combos;
+    public bool attack1;
+    public bool attack2;
+    public bool attack3;
+    private bool startCombo;
+
+    public List<string> currentCombo;
+    private float comboTimmer;
+    private Hit currentHit, nextHit;
+    private bool canHit = true;
+    private bool resetCombo ;
 
     bool isRunning = false;
         void Start() {
@@ -30,6 +40,7 @@ public class Player : MonoBehaviour {
         CheckIfGrounded();
         anim.SetBool("run", isRunning && isGrounded);
         anim.SetBool("jump", !isGrounded);
+        
         CheckInputs();
 
         
@@ -71,19 +82,65 @@ public class Player : MonoBehaviour {
 
     void CheckInputs() {
         for (int i = 0; i < combos.Length; i++){
-            if (Input.GetButtonDown(combos[i].hits[0].inputButton)){
-                PlayerHit(combos[i].hits[0]);
-                break;
+
+            if(combos[i].hits.Length > currentCombo.Count){
+                if (Input.GetButtonDown(combos[i].hits[currentCombo.Count].inputButton)){
+
+                    if(currentCombo.Count == 0){
+                        Debug.Log("Primeiro hit adicionado");
+                        PlayerHit(combos[i].hits[currentCombo.Count]);
+                        break;
+                    }else {
+                        bool  comboMatch = false;
+                        for (int j = 0; j < currentCombo.Count; j++)
+                        {
+                            if ( currentCombo[j] != combos[i].hits[j].inputButton  ){
+                                comboMatch = false;
+                                Debug.Log("botao errado");
+                                break;
+                            } else {
+                                comboMatch = true;
+                            }
+                        }
+
+                        if(comboMatch && canHit){
+                            Debug.Log("Hit adicionao a lista");
+                            canHit = false;
+                            nextHit = combos[i].hits[currentCombo.Count];
+                            break;
+                        }
+                    }
+                    
+                }
+            } 
+        }
+        if(startCombo) {
+            comboTimmer += Time.deltaTime;
+            if(comboTimmer >= currentHit.animationTime && !canHit){
+                PlayerHit(nextHit);
+            }
+
+            if(comboTimmer >= currentHit.resetTime){
+                ResetCombo();
             }
         }
     }
 
     void PlayerHit(Hit hit) {
-        anim.Play(hit.animation);
-
+        comboTimmer = 0;
+        anim.SetBool(hit.animation, true);
+        startCombo = true;
+        currentCombo.Add(hit.inputButton);
+        currentHit= hit;
+        canHit=true;
     }
 
     void ResetCombo() {
+        startCombo= false;
+        comboTimmer= 0;
+        currentCombo.Clear();
+        anim.Rebind();
+        canHit=true;
 
     }
 }
