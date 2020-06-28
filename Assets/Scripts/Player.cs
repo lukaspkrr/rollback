@@ -6,6 +6,11 @@ using UnityEngine;
 public class Player : MonoBehaviour {
     // Start is called before the first frame update
     public SpriteRenderer rendererRef;
+    public float jumpForce ;
+    bool isGrounded = false;
+    public Transform isGroundedChecker; 
+    public float checkGroundRadius; 
+    public LayerMask groundLayer;
     void Start() {
         
     }
@@ -13,6 +18,8 @@ public class Player : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         Move();
+        Jump();
+        CheckIfGrounded();
         
     }
 
@@ -26,5 +33,23 @@ public class Player : MonoBehaviour {
             rendererRef.flipX = true;
         }
         transform.position = pos;
+    }
+
+    void Jump() {
+        Vector3 pos = transform.position;
+        if(Input.GetKey(KeyCode.UpArrow ) && isGrounded){
+            pos.y += 0.1f * jumpForce;
+            rendererRef.flipX = false;
+        } 
+        transform.position = pos;
+    }
+
+    void CheckIfGrounded() { 
+        Collider2D collider = Physics2D.OverlapCircle(isGroundedChecker.position, checkGroundRadius, groundLayer); 
+        if (collider != null) { 
+            isGrounded = true; 
+        } else { 
+            isGrounded = false; 
+        } 
     }
 }
