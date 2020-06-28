@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
 public class Player : MonoBehaviour {
     // Start is called before the first frame update
     public SpriteRenderer rendererRef;
@@ -13,7 +14,10 @@ public class Player : MonoBehaviour {
     public LayerMask groundLayer;
 
     private Animator anim;
-    
+
+    private int attackSequence;
+    public Combo[] combos;
+
     bool isRunning = false;
         void Start() {
         anim =  GetComponent<Animator>();
@@ -25,10 +29,10 @@ public class Player : MonoBehaviour {
         Jump();
         CheckIfGrounded();
         anim.SetBool("run", isRunning && isGrounded);
-        anim.SetBool("jump", isGrounded == false);
-        // anim.SetBool("attack1");
-        // anim.SetBool("attack2");
-        // anim.SetBool("attack3");
+        anim.SetBool("jump", !isGrounded);
+        anim.SetBool("attack1", attackSequence == 1);
+        anim.SetBool("attack2", attackSequence == 2);
+        anim.SetBool("attack3", attackSequence == 3);
         
     }
 
@@ -64,5 +68,11 @@ public class Player : MonoBehaviour {
         } else { 
             isGrounded = false; 
         } 
+    }
+
+    void AttackCombo() {
+        if(Input.GetKey(KeyCode.Z)){
+            
+        }
     }
 }
