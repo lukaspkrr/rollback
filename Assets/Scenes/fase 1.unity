@@ -5199,6 +5199,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3963165099489940539, guid: e9042fa77bbd6bd4493bcebce87cee58,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4447555136954854752, guid: e9042fa77bbd6bd4493bcebce87cee58,
         type: 3}
       propertyPath: m_Size.x

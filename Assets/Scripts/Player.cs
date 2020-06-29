@@ -7,7 +7,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
     // Start is called before the first frame update
     public SpriteRenderer rendererRef;
-    public float jumpForce ;
+    public float jumpForce  = 7f;
     bool isGrounded = false;
     public Transform isGroundedChecker; 
     public float checkGroundRadius; 
@@ -29,10 +29,12 @@ public class Player : MonoBehaviour {
     private Hit currentHit, nextHit;
     private bool canHit = true;
     private bool resetCombo ;
+    private Rigidbody2D rb;
 
     bool isRunning = false;
         void Start() {
         anim =  GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -65,12 +67,9 @@ public class Player : MonoBehaviour {
     }
 
     void Jump() {
-        Vector3 pos = transform.position;
         if(Input.GetKey(KeyCode.UpArrow ) && isGrounded){
-            pos.y += 0.1f * jumpForce;
-            rendererRef.flipX = false;
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         } 
-        transform.position = pos;
     }
 
     void CheckIfGrounded() { 
