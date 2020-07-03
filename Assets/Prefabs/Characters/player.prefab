@@ -193,7 +193,31 @@ MonoBehaviour:
       damage: 5
       slowDown: 0
   - hits:
-    - animation: bow
+    - animation: bowIdle
+      inputButton: Fire2
+      animationTime: 0.75
+      resetTime: 2
+      damage: 1
+      slowDown: 0
+    - animation: bowAttack
+      inputButton: Fire2
+      animationTime: 0.75
+      resetTime: 0.85
+      damage: 1
+      slowDown: 0
+    - animation: bowAttack
+      inputButton: Fire2
+      animationTime: 0.75
+      resetTime: 0.85
+      damage: 1
+      slowDown: 0
+    - animation: bowAttack
+      inputButton: Fire2
+      animationTime: 0.75
+      resetTime: 0.85
+      damage: 1
+      slowDown: 0
+    - animation: bowAttack
       inputButton: Fire2
       animationTime: 0.75
       resetTime: 0.85

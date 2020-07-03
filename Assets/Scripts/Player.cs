@@ -4,6 +4,7 @@ using UnityEngine;
 
 
 
+
 public class Player : MonoBehaviour {
     // Start is called before the first frame update
     public SpriteRenderer rendererRef;
@@ -12,7 +13,7 @@ public class Player : MonoBehaviour {
     public Transform isGroundedChecker; 
     public float checkGroundRadius; 
     public LayerMask groundLayer;
-
+    public bool directionFoward = true;
     private Animator anim;
 
     private int attackSequence;
@@ -24,12 +25,15 @@ public class Player : MonoBehaviour {
     public bool attack3;
     private bool startCombo;
 
+    public Shoot shootArrow;
+
     public List<string> currentCombo;
     private float comboTimmer;
     private Hit currentHit, nextHit;
     private bool canHit = true;
     private bool resetCombo ;
     private Rigidbody2D rb;
+    public Rigidbody2D shot;
 
     bool isRunning = false;
         void Start() {
@@ -56,10 +60,12 @@ public class Player : MonoBehaviour {
             pos.x += 0.1f;
             rendererRef.flipX = false;
             isRunning = true;
+            directionFoward = true;
         } else if (Input.GetKey(KeyCode.LeftArrow)){
             pos.x += -0.1f;
             rendererRef.flipX = true;
             isRunning = true;
+            directionFoward = false;
         } else {
             isRunning = false;
         }
@@ -89,7 +95,7 @@ public class Player : MonoBehaviour {
 
                     if(currentCombo.Count == 0){
                         Debug.Log("Primeiro hit adicionado");
-                        PlayerHit(combos[i].hits[currentCombo.Count]);
+                        PlayerHit(combos[i].hits[currentCombo.Count], currentCombo.Count);
                         break;
                     }else {
                         bool  comboMatch = false;
@@ -118,7 +124,7 @@ public class Player : MonoBehaviour {
         if(startCombo) {
             comboTimmer += Time.deltaTime;
             if(comboTimmer >= currentHit.animationTime && !canHit){
-                PlayerHit(nextHit);
+                PlayerHit(nextHit, currentCombo.Count);
             }
 
             if(comboTimmer >= currentHit.resetTime){
@@ -127,15 +133,26 @@ public class Player : MonoBehaviour {
         }
     }
 
-    void PlayerHit(Hit hit) {
+    async void PlayerHit(Hit hit, int count) {
         comboTimmer = 0;
         attack.SetAttack(hit);
         anim.SetBool(hit.animation, true);
         startCombo = true;
         currentCombo.Add(hit.inputButton);
         currentHit= hit;
-        
         canHit=true;
+        if(hit.inputButton == "Fire2" && count > 1 ){
+            Rigidbody2D newShot = Instantiate(shot, transform.position, Quaternion.identity);
+               int shotDirection = 1;
+
+        if(directionFoward){
+            shotDirection = 1;
+        }else{
+           shotDirection = -1; 
+        }
+        newShot.velocity = Vector2.right * 15 * shotDirection;
+            
+        }
     }
 
     void ResetCombo() {
