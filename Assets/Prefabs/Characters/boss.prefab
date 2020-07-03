@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4315653734709701497}
   - component: {fileID: 6174733197018116678}
   - component: {fileID: 4481059056059556263}
+  - component: {fileID: 685252480}
   m_Layer: 0
   m_Name: boss
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1860693082501971209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.266766, y: 1.9048066, z: 0}
-  m_LocalScale: {x: 3.5487878, y: 3.5487878, z: 3.5487878}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 1860693084417053292}
   - {fileID: 1860693084129014763}
@@ -171,6 +172,24 @@ MonoBehaviour:
     type: 3}
   damageTextPosition: {fileID: 1860693084129014763}
   anim: {fileID: 1860693082501971208}
+--- !u!114 &685252480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860693082501971209}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53ac67610ef7144786a4584e9c25292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flySpeed: 2
+  frequency: 5
+  magnitude: 0.5
+  initX: 0
+  initY: 3
+  rangedLimitFly: 10
 --- !u!1 &1860693084129014740
 GameObject:
   m_ObjectHideFlags: 0
