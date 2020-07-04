@@ -18,6 +18,7 @@ public abstract class Damageable : MonoBehaviour
     public void TakeDamage(int amount){
         currentHealth -= amount;
         // onDamage.Invoke();
+        ReduceLifeBar(currentHealth,maxHealth);
         if(currentHealth <= 0){
             onDeath.Invoke();
             Death();
@@ -25,5 +26,6 @@ public abstract class Damageable : MonoBehaviour
     }
 
     public abstract void Death();
+    public abstract void ReduceLifeBar(int currentHealth, int maxHealth);
 
 }
