@@ -13,13 +13,13 @@ public class Damager : MonoBehaviour
        }
    }
    
-//    private void OnCollisionEnter2D(Collision2D other){
-//        Damageable damageable = other.gameObject.GetComponent<Damageable>();
-//        if(damageable != null){
-//            DoDamage(damageable);
-//        }
+   private void OnCollisionEnter2D(Collision2D other){
+       Damageable damageable = other.gameObject.GetComponent<Damageable>();
+       if(damageable != null){
+           DoDamage(damageable);
+       }
 
-//    }
+   }
 
    private void OnTriggerEnter2D(Collider2D other){
     Damageable damageable = other.GetComponent<Damageable>();

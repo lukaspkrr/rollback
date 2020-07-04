@@ -12,6 +12,7 @@ public class Damage : MonoBehaviour
     public GameObject damageText;
     public Transform damageTextPosition;
     public Animator anim;
+    public Damageable damageable;
     private void Awake (){
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim =  GetComponent<Animator>();
@@ -19,6 +20,7 @@ public class Damage : MonoBehaviour
     public void TakeDamage(int damage){
         anim.SetBool("hit", true);
         Invoke("ReleaseDamage", damageTime);
+        damageable.TakeDamage(damage);
         GameObject newDamageText = Instantiate(damageText, damageTextPosition.position, Quaternion.identity);
         newDamageText.GetComponentInChildren<Text>().text = damage.ToString();
         Destroy(newDamageText, 1);
