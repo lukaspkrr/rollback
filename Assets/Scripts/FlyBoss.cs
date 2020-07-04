@@ -5,71 +5,85 @@ using UnityEngine.UI;
 
 public class FlyBoss : MonoBehaviour
 {
-    public float flySpeed = 2f;
+
+    public float speed = 2f;
     public float frequency = 5f;
     public float magnitude = 0.5f;
-
+    public float rangedLimit = 10f;
     public float initX = 0, initY = 0;
-    public float rangedLimitFly = 10f;
+    public float gravityScale = 10f;
 
-    bool faceDirectionRight = true;
+    // privates
+    private bool faceDirectionRight = true;
 
-    Vector3 pos;
-
-    Vector3 toRight = new Vector3(-3, 3, 3);
-    Vector3 toLeft = new Vector3(3, 3, 3);
+    private Vector3 pos;
 
 
     void Start()
     {
-        pos = new Vector3(initX, initY, 0);
-        transform.localScale = toRight;
-
+        initialPositionBoss();
     }
 
+    private  void initialPositionBoss()
+    {
+        Vector3 lTemp = transform.localScale;
+        if (lTemp.x > 0)
+        {
+            lTemp.x = lTemp.x * -1;
+            transform.localScale = lTemp;
+        }
+    }
 
     void Update()
     {
-
         verifyDirection();
 
         if (faceDirectionRight)
         {
-            moveRight();
+            flyRight();
         }
         else
         {
-            moveLeft();
+            flyLeft();
         }
 
     }
 
     void verifyDirection()
     {
-        if (pos.x > (initX + (rangedLimitFly / 2)))
+        if (pos.x > (initX + (rangedLimit / 2)))
         {
             faceDirectionRight = false;
-            transform.localScale = toLeft;
+            invertByScale();
         }
-        else if (pos.x < (initX - (rangedLimitFly / 2)))
+        else if (pos.x < (initX - (rangedLimit / 2)))
         {
             faceDirectionRight = true;
-            transform.localScale = toRight;
+            invertByScale();
         }
 
 
     }
 
+    // alter direction object example: (3, 3, 3) to (-3, 3, 3)
+    private void invertByScale()
+    {
+        Vector3 lTemp = transform.localScale;
+        lTemp.x = lTemp.x * -1;
+        transform.localScale = lTemp;
+    }
 
-    void moveRight()
+    void flyRight()
     {
-        pos += transform.right * Time.deltaTime * flySpeed;
+        pos += transform.right * Time.deltaTime * speed;
         transform.position = pos + transform.up * Mathf.Sin(Time.time * frequency) * magnitude;
     }
-    void moveLeft()
+
+    void flyLeft()
     {
-        pos -= transform.right * Time.deltaTime * flySpeed;
+        pos -= transform.right * Time.deltaTime * speed;
         transform.position = pos + transform.up * Mathf.Sin(Time.time * frequency) * magnitude;
     }
+
 
 }
