@@ -44,8 +44,9 @@ GameObject:
   - component: {fileID: 4572701283897724913}
   - component: {fileID: 5970347337617823229}
   - component: {fileID: 264885514044126474}
+  - component: {fileID: 4868522805406270705}
   m_Layer: 8
-  m_Name: BigBloated 1
+  m_Name: BigBloated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,3 +201,18 @@ MonoBehaviour:
     type: 3}
   damageTextPosition: {fileID: 264885514273157293}
   anim: {fileID: 264885514407497111}
+  damageable: {fileID: 0}
+--- !u!114 &4868522805406270705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264885514407497110}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 583ee6cf34b47ba4a929a3e70a530463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  sr: {fileID: 264885514407497104}
