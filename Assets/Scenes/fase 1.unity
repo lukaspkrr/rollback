@@ -896,6 +896,38 @@ MonoBehaviour:
   - {x: 0.61285734, y: 0.5749972, z: 0}
   - {x: -0.29397058, y: 0.654521, z: 0}
   - {x: -9.121917, y: -7.615719, z: 0}
+--- !u!1 &277739047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1860693082501971209, guid: 834034352312b445ebfe3b7cf669b53f,
+    type: 3}
+  m_PrefabInstance: {fileID: 685252478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &277739048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277739047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4266d73c8a00e4537a921725e1a2369b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 100
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  damageText: {fileID: 1915844719747006571, guid: 918c00820483b4d399e12c313d785a37,
+    type: 3}
+  damageTextPosition: {fileID: 1396979864}
+--- !u!4 &296084069 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4117675040712788853, guid: 7ac44b3f19e2093439b4b6636e596c81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1461122986}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &339944308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -903,6 +935,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 264885514044126474, guid: 25304b109ab6b4eb3b36a2668a14ba5f,
+        type: 3}
+      propertyPath: damageable
+      value: 
+      objectReference: {fileID: 1941359693}
     - target: {fileID: 264885514407497105, guid: 25304b109ab6b4eb3b36a2668a14ba5f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2379,6 +2416,8 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
+  damageText: {fileID: 0}
+  damageTextPosition: {fileID: 0}
   LifeBar: {fileID: 1370916956}
 --- !u!4 &575987784
 Transform:
@@ -2765,6 +2804,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4481059056059556263, guid: 834034352312b445ebfe3b7cf669b53f,
+        type: 3}
+      propertyPath: damageable
+      value: 
+      objectReference: {fileID: 277739048}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 834034352312b445ebfe3b7cf669b53f, type: 3}
 --- !u!1 &685323414
@@ -4364,6 +4408,12 @@ MonoBehaviour:
   - {x: 0.61285734, y: 0.5749972, z: 0}
   - {x: -0.17120886, y: 0.40899658, z: 0}
   - {x: -7.00427, y: -7.431576, z: 0}
+--- !u!4 &1120276473 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 264885514273157293, guid: 25304b109ab6b4eb3b36a2668a14ba5f,
+    type: 3}
+  m_PrefabInstance: {fileID: 339944308}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1134672989
 GameObject:
   m_ObjectHideFlags: 0
@@ -5253,6 +5303,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6338916, y: 1.83}
   m_EdgeRadius: 0
+--- !u!4 &1396979864 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1860693084129014763, guid: 834034352312b445ebfe3b7cf669b53f,
+    type: 3}
+  m_PrefabInstance: {fileID: 685252478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1438665623
 GameObject:
   m_ObjectHideFlags: 0
@@ -6036,6 +6092,9 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
+  damageText: {fileID: 1915844719747006571, guid: 918c00820483b4d399e12c313d785a37,
+    type: 3}
+  damageTextPosition: {fileID: 296084069}
 --- !u!1 &1941359692 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 264885514407497110, guid: 25304b109ab6b4eb3b36a2668a14ba5f,
@@ -6059,6 +6118,9 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
+  damageText: {fileID: 1915844719747006571, guid: 918c00820483b4d399e12c313d785a37,
+    type: 3}
+  damageTextPosition: {fileID: 1120276473}
 --- !u!1 &1960654576
 GameObject:
   m_ObjectHideFlags: 0
@@ -6451,6 +6513,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4801867881708764650, guid: 9d9495a0ec3a30247a874038bfb11a31,
+        type: 3}
+      propertyPath: LifeBar
+      value: 
+      objectReference: {fileID: 1370916956}
     - target: {fileID: 4801867881708764652, guid: 9d9495a0ec3a30247a874038bfb11a31,
         type: 3}
       propertyPath: m_Name
