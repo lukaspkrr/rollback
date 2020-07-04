@@ -25,8 +25,6 @@ public class Player : MonoBehaviour {
     public bool attack3;
     private bool startCombo;
 
-    public Shoot shootArrow;
-
     public List<string> currentCombo;
     private float comboTimmer;
     private Hit currentHit, nextHit;
@@ -132,7 +130,7 @@ public class Player : MonoBehaviour {
         }
     }
 
-    async void PlayerHit(Hit hit, int count) {
+    void PlayerHit(Hit hit, int count) {
         comboTimmer = 0;
         attack.SetAttack(hit);
         anim.SetBool(hit.animation, true);
@@ -140,18 +138,22 @@ public class Player : MonoBehaviour {
         currentCombo.Add(hit.inputButton);
         currentHit= hit;
         canHit=true;
-        if(hit.inputButton == "Fire2" && count > 1 ){
-            Rigidbody2D newShot = Instantiate(shot, transform.position, Quaternion.identity);
+        if(hit.inputButton == "Fire2" && count >= 1 ){
+           Invoke("PlayerShoot", 0.5f);
+        }
+    }
+    void PlayerShoot(){
+        Rigidbody2D newShot = Instantiate(shot, transform.position, Quaternion.identity);
                int shotDirection = 1;
 
         if(directionFoward){
             shotDirection = 1;
+            newShot.transform.localScale = new Vector2(newShot.transform.localScale.x*-1,newShot.transform.localScale.y);
         }else{
            shotDirection = -1; 
+           newShot.transform.localScale = new Vector2(newShot.transform.localScale.x*1,newShot.transform.localScale.y);
         }
-        newShot.velocity = Vector2.right * 15 * shotDirection;
-            
-        }
+        newShot.velocity = Vector2.right * 30 * shotDirection;
     }
 
     void ResetCombo() {

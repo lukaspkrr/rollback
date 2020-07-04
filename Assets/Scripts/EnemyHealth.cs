@@ -11,7 +11,12 @@ public class EnemyHealth : Damageable
         Debug.Log("morreu");
     }
     public override void ReduceLifeBar(int currentHealth, int maxHealth){
-        Debug.Log(currentHealth);
+        Debug.Log("teste");
+        anim.SetBool("hit", true);
+        Invoke("ReleaseDamage", 0.1f);
+    }
+    void ReleaseDamage() {
+        anim.SetBool("hit", false);
     }
     void Start()
     {
