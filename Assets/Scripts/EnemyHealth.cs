@@ -10,6 +10,9 @@ public class EnemyHealth : Damageable
         anim.SetBool("die", true);
         Debug.Log("morreu");
     }
+    public override void ReduceLifeBar(int currentHealth, int maxHealth){
+        Debug.Log(currentHealth);
+    }
     void Start()
     {
         anim =  GetComponent<Animator>();

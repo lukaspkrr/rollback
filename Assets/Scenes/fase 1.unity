@@ -340,6 +340,26 @@ MonoBehaviour:
   - {x: 0.61285734, y: 0.5749972, z: 0}
   - {x: -0.29397058, y: 0.654521, z: 0}
   - {x: -9.121917, y: -7.615719, z: 0}
+--- !u!1 &91348132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1860693082501971209, guid: 834034352312b445ebfe3b7cf669b53f,
+    type: 3}
+  m_PrefabInstance: {fileID: 685252478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &91348133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91348132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4378cd28802d24516b58ef5ed641a685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  destroyOnDemage: 0
 --- !u!1 &94469763
 GameObject:
   m_ObjectHideFlags: 0
@@ -5493,10 +5513,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 100
+  currentHealth: 0
   onDeath:
     m_PersistentCalls:
       m_Calls: []
+  LifeBar: {fileID: 1370916956}
 --- !u!1 &576972928
 GameObject:
   m_ObjectHideFlags: 0
@@ -5885,12 +5906,12 @@ PrefabInstance:
     - target: {fileID: 1860693084417053293, guid: 834034352312b445ebfe3b7cf669b53f,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.26
+      value: 1.19
       objectReference: {fileID: 0}
     - target: {fileID: 1860693084417053293, guid: 834034352312b445ebfe3b7cf669b53f,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.2
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: 1860693084417053293, guid: 834034352312b445ebfe3b7cf669b53f,
         type: 3}
@@ -7936,9 +7957,9 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.8585717, y: 0.98565245}
-    oldSize: {x: 1.27, y: 0.69}
-    newSize: {x: 0.26, y: 0.2}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.26, y: 0.2}
+    newSize: {x: 1.19, y: 0.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

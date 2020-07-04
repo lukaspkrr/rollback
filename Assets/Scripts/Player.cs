@@ -48,7 +48,6 @@ public class Player : MonoBehaviour {
         CheckIfGrounded();
         anim.SetBool("run", isRunning && isGrounded);
         anim.SetBool("jump", !isGrounded);
-        
         CheckInputs();
 
         
