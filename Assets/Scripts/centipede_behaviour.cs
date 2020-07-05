@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class centipede_behaviour : MonoBehaviour {
+public class enemy_behaviour : MonoBehaviour {
 
     public Transform rayCast;
     public LayerMask rayCastMask;
