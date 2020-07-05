@@ -16,8 +16,8 @@ public class Attack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         Damage enemy = other.GetComponent<Damage>();
-        Debug.Log(enemy.tag);
-        if(enemy != null){
+        
+        if(enemy != null && (other.GetType() == typeof(CapsuleCollider2D))){
             enemy.TakeDamage(damage);
             ComboManager.instance.SetCombo();
         }
