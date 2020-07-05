@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class centipede_behaviour : MonoBehaviour {
+public class bigBloated_behaviour : MonoBehaviour {
 
     public Transform rayCast;
     public LayerMask rayCastMask;
@@ -29,15 +29,15 @@ public class centipede_behaviour : MonoBehaviour {
     }
     
     void Update() {
-        if (!attackMode && !anim.GetCurrentAnimatorStateInfo(0).IsName("centipedeDie")) {
+        if (!attackMode && !anim.GetCurrentAnimatorStateInfo(0).IsName("BigBloatedDie")) {
             Move();
         }
 
         if (!insideOfLimits() && !inRange 
         && (
-            !anim.GetCurrentAnimatorStateInfo(0).IsName("centipedeAttack2")
-            || !anim.GetCurrentAnimatorStateInfo(0).IsName("centipedeAttack3")
-            || !anim.GetCurrentAnimatorStateInfo(0).IsName("centipedeAttack4")
+            !anim.GetCurrentAnimatorStateInfo(0).IsName("BigBloatedAttack1")
+            || !anim.GetCurrentAnimatorStateInfo(0).IsName("BigBloatedAttack3")
+            || !anim.GetCurrentAnimatorStateInfo(0).IsName("BigBloatedAttack4")
         )) {
             SelectTarget();
         }
@@ -85,9 +85,9 @@ public class centipede_behaviour : MonoBehaviour {
     void Move() {
         anim.SetBool("walk", true);
 
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("centipedeAttack2")
-            || !anim.GetCurrentAnimatorStateInfo(0).IsName("centipedeAttack3")
-            || !anim.GetCurrentAnimatorStateInfo(0).IsName("centipedeAttack4")
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("BigBloatedAttack1")
+            || !anim.GetCurrentAnimatorStateInfo(0).IsName("BigBloatedAttack3")
+            || !anim.GetCurrentAnimatorStateInfo(0).IsName("BigBloatedAttack4")
         ) {
             Vector2 targetPosition = new Vector2(target.position.x, transform.position.y);
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
