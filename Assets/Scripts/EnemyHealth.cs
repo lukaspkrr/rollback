@@ -18,7 +18,7 @@ public class EnemyHealth : Damageable
     public override void ReduceLifeBar(int currentHealth, int maxHealth){
 
         if(BossLifeBar ){
-            Life = OriginalScale * (float)currentHealth /100;
+            Life = OriginalScale * (float)currentHealth /maxHealth;
             float LifeY = BossLifeBar.gameObject.transform.localScale.y;
             float LifeZ = BossLifeBar.gameObject.transform.localScale.z;
             if(currentHealth > 0){
