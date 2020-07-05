@@ -20,6 +20,8 @@ public abstract class Damageable : MonoBehaviour
 
     public void TakeDamage(int amount){
         currentHealth -= amount;
+
+        // Debug.Log(amount);
         // onDamage.Invoke();
         ReduceLifeBar(currentHealth,maxHealth);
         if(currentHealth <= 0){

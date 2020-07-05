@@ -24,7 +24,7 @@ public class EnemyHealth : Damageable
             Life = OriginalScale * (float)currentHealth /maxHealth;
             float LifeY = BossLifeBar.gameObject.transform.localScale.y;
             float LifeZ = BossLifeBar.gameObject.transform.localScale.z;
-            Debug.Log(TextVictory);
+            // Debug.Log(TextVictory);
             if(currentHealth > 0){
                 
                 BossLifeBar.gameObject.transform.localScale = new Vector3(Life ,LifeY,LifeZ);
@@ -61,7 +61,7 @@ public class EnemyHealth : Damageable
         }
         catch (System.Exception) {
             
-            Debug.Log("SemBarra");
+            // Debug.Log("SemBarra");
         }
         
     }

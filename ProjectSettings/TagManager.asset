@@ -8,6 +8,7 @@ TagManager:
   - Arrow
   - BossLifeBar
   - TextVictory
+  - Trigger
   layers:
   - Default
   - TransparentFX
