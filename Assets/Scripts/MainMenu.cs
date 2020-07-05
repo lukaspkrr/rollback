@@ -8,12 +8,9 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     public void NewGame()
     {
-        SceneManager.LoadScene("Fase 1", LoadSceneMode.Single);
-        
+      SceneManager.LoadScene(1);    
     }
 
-    // Update is called once per frame
-    
     public void Exit() {
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
