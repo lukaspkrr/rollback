@@ -194,6 +194,12 @@ MonoBehaviour:
   - {x: 0.61285734, y: 0.5749972, z: 0}
   - {x: -0.29397058, y: 0.654521, z: 0}
   - {x: -9.121917, y: -7.615719, z: 0}
+--- !u!1 &13457476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6362838827426224883, guid: 0cddd0ee93b43471bb64cd06f8a63cab,
+    type: 3}
+  m_PrefabInstance: {fileID: 6362838828500803232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &64062149
 GameObject:
   m_ObjectHideFlags: 0
@@ -6153,7 +6159,7 @@ PrefabInstance:
         type: 3}
       propertyPath: LifeBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 13457476}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb6328b6e1d4458bb3e93cb671904e9, type: 3}
 --- !u!1001 &6362838828500803232
