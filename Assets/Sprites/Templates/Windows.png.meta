@@ -345,7 +345,7 @@ TextureImporter:
         height: 168
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 345, y: 70, z: 345, w: 66}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -636,10 +636,10 @@ TextureImporter:
         x: 2659
         y: 1023
         width: 617
-        height: 655
+        height: 652
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 310, y: 331, z: 299, w: 305}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -759,9 +759,9 @@ TextureImporter:
       name: Windows_24
       rect:
         serializedVersion: 2
-        x: 4728
-        y: 1418
-        width: 121
+        x: 4298
+        y: 1165
+        width: 100
         height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -864,13 +864,13 @@ TextureImporter:
       name: Windows_29
       rect:
         serializedVersion: 2
-        x: 3424
-        y: 966
-        width: 480
-        height: 148
+        x: 3428
+        y: 969
+        width: 473
+        height: 141
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 223, y: 56, z: 223, w: 57}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1074,8 +1074,8 @@ TextureImporter:
       name: Windows_39
       rect:
         serializedVersion: 2
-        x: 3886
-        y: 832
+        x: 3806
+        y: 704
         width: 335
         height: 123
       alignment: 0
@@ -1179,7 +1179,7 @@ TextureImporter:
       name: Windows_44
       rect:
         serializedVersion: 2
-        x: 3285
+        x: 3287
         y: 427
         width: 512
         height: 126
@@ -1222,7 +1222,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3583
-        y: 273
+        y: 277
         width: 511
         height: 125
       alignment: 0
@@ -1284,7 +1284,7 @@ TextureImporter:
       name: Windows_49
       rect:
         serializedVersion: 2
-        x: 4351
+        x: 4349
         y: 279
         width: 340
         height: 57
@@ -1305,9 +1305,9 @@ TextureImporter:
       name: Windows_50
       rect:
         serializedVersion: 2
-        x: 1573
+        x: 1666
         y: 0
-        width: 377
+        width: 284
         height: 105
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1369,9 +1369,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3583
-        y: 0
+        y: 118
         width: 511
-        height: 244
+        height: 126
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
