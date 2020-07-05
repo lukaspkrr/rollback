@@ -2448,6 +2448,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 724720523679635122, guid: 1f513da2a06e7b5468a972df8f2d1e62,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 724720523679635125, guid: 1f513da2a06e7b5468a972df8f2d1e62,
         type: 3}
       propertyPath: m_Name
