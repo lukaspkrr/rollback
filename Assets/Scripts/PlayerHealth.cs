@@ -27,8 +27,7 @@ public class PlayerHealth : Damageable
     void ReleaseDamage() {
         anim.SetBool("hit", false);
     }
-    void Start()
-    {
+    void Start(){
         anim =  GetComponent<Animator>();
         base.Start();
     }

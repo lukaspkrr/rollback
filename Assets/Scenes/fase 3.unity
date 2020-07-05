@@ -718,8 +718,8 @@ GameObject:
   - component: {fileID: 459655365}
   - component: {fileID: 459655366}
   m_Layer: 0
-  m_Name: Windows_48
-  m_TagString: Untagged
+  m_Name: BossLifeBar
+  m_TagString: BossLifeBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
