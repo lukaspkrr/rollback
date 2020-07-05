@@ -15,7 +15,10 @@ public class NexLevel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        SceneManager.LoadScene(nextSceneToLoad);
+        if (other.gameObject.tag == "Player"){
+            SceneManager.LoadScene(nextSceneToLoad);
+        }
+        
     }
 
 }
