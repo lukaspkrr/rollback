@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : Damageable
 {
@@ -10,8 +11,13 @@ public class PlayerHealth : Damageable
     // Start is called before the first frame update
     public override void Death(){
         anim.SetBool("die", true);
+         StartCoroutine(timeOut());
     }
 
+    IEnumerator timeOut() {
+        yield return new WaitForSeconds(2);
+         SceneManager.LoadScene(0);   
+    }
      public override void ReduceLifeBar(int currentHealth, int maxHealth){
          anim.SetBool("hit", true);
          if(currentHealth > 0){
