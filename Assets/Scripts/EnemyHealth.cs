@@ -9,6 +9,7 @@ public class EnemyHealth : Damageable
     public override void Death(){
         anim.SetBool("die", true);
         Debug.Log("morreu");
+        Invoke("DestroyAferDeath", 1f);
     }
     public override void ReduceLifeBar(int currentHealth, int maxHealth){
         Debug.Log("teste");
@@ -17,6 +18,9 @@ public class EnemyHealth : Damageable
     }
     void ReleaseDamage() {
         anim.SetBool("hit", false);
+    }
+    void DestroyAferDeath() {
+        Destroy(gameObject);
     }
     void Start()
     {
