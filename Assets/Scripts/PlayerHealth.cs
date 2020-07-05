@@ -10,14 +10,12 @@ public class PlayerHealth : Damageable
     // Start is called before the first frame update
     public override void Death(){
         anim.SetBool("die", true);
-        Debug.Log("morreu");
     }
 
      public override void ReduceLifeBar(int currentHealth, int maxHealth){
          anim.SetBool("hit", true);
          if(currentHealth > 0){
              Life = LifeBar.gameObject.transform.localScale.y * (float)currentHealth /100;
-             Debug.Log(Life);
             LifeBar.gameObject.transform.localScale = new Vector3(Life ,LifeBar.gameObject.transform.localScale.y,LifeBar.gameObject.transform.localScale.z);
          } else{
              LifeBar.gameObject.transform.localScale = new Vector3(0,LifeBar.gameObject.transform.localScale.y,LifeBar.gameObject.transform.localScale.z);

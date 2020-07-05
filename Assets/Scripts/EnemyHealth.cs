@@ -8,11 +8,9 @@ public class EnemyHealth : Damageable
     // Start is called before the first frame update
     public override void Death(){
         anim.SetBool("die", true);
-        Debug.Log("morreu");
         Invoke("DestroyAferDeath", 1f);
     }
     public override void ReduceLifeBar(int currentHealth, int maxHealth){
-        Debug.Log("teste");
         anim.SetBool("hit", true);
         Invoke("ReleaseDamage", 0.1f);
     }

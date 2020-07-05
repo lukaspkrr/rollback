@@ -25,7 +25,6 @@ public class FlyBoss : MonoBehaviour
 
     private  void initialPositionBoss()
     {
-        Debug.Log("Setando posicao iniical");
         Vector3 lTemp = transform.localScale;
         if (lTemp.x > 0)
         {
@@ -82,8 +81,6 @@ public class FlyBoss : MonoBehaviour
          }   
 
         transform.localScale = lTemp;
-        Debug.Log("Direction: "+lTemp.x);
-
     }
 
     void flyRight()

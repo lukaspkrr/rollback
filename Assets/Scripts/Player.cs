@@ -91,7 +91,7 @@ public class Player : MonoBehaviour {
                 if (Input.GetButtonDown(combos[i].hits[currentCombo.Count].inputButton)){
 
                     if(currentCombo.Count == 0){
-                        Debug.Log("Primeiro hit adicionado");
+                        // Debug.Log("Primeiro hit adicionado");
                         PlayerHit(combos[i].hits[currentCombo.Count], currentCombo.Count);
                         break;
                     }else {
@@ -100,7 +100,7 @@ public class Player : MonoBehaviour {
                         {
                             if ( currentCombo[j] != combos[i].hits[j].inputButton  ){
                                 comboMatch = false;
-                                Debug.Log("botao errado");
+                                // Debug.Log("botao errado");
                                 break;
                             } else {
                                 comboMatch = true;
@@ -108,7 +108,7 @@ public class Player : MonoBehaviour {
                         }
 
                         if(comboMatch && canHit){
-                            Debug.Log("Hit adicionao a lista");
+                            // Debug.Log("Hit adicionao a lista");
                             canHit = false;
                             nextHit = combos[i].hits[currentCombo.Count];
                             break;
