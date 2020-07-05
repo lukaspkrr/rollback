@@ -18,9 +18,6 @@ public class FlyBoss : MonoBehaviour
 
     private Vector3 pos;
 
-    public SpriteRenderer rendererRef;
-
-
     void Start()
     {
         initialPositionBoss();
@@ -28,6 +25,7 @@ public class FlyBoss : MonoBehaviour
 
     private  void initialPositionBoss()
     {
+        Debug.Log("Setando posicao iniical");
         Vector3 lTemp = transform.localScale;
         if (lTemp.x > 0)
         {
@@ -57,22 +55,35 @@ public class FlyBoss : MonoBehaviour
         {
             
             faceDirectionRight = false;
-            invert(!faceDirectionRight);
+            invert(faceDirectionRight);
             
         }
         else if (pos.x < (initX - (rangedLimit / 2)))
         {
             faceDirectionRight = true;
-            invert(!faceDirectionRight);
+            invert(faceDirectionRight);
+        } else {
+            invert(faceDirectionRight);
         }
-    Debug.Log("Direction Right: "+faceDirectionRight);
 
     }
 
     // alter direction object example: (3, 3, 3) to (-3, 3, 3)
     private void invert(bool isRight)
     {
-        rendererRef.flipX = isRight;;
+
+         Vector3 lTemp = transform.localScale;
+         if(isRight && lTemp.x > 0){
+             lTemp.x = lTemp.x * -1;
+         }else if(!isRight && lTemp.x < 0) {
+             lTemp.x = lTemp.x * -1;
+         } else{
+             transform.localScale = lTemp;
+         }   
+
+        transform.localScale = lTemp;
+        Debug.Log("Direction: "+lTemp.x);
+
     }
 
     void flyRight()
