@@ -18,8 +18,8 @@ GameObject:
   - component: {fileID: 1279630359346590278}
   - component: {fileID: 1279630359346590302}
   - component: {fileID: 2042984855354053928}
-  m_Layer: 0
-  m_Name: boss 1
+  m_Layer: 10
+  m_Name: boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 1279630359924233589}
   - component: {fileID: 1279630359924233588}
   - component: {fileID: 1279630359924233591}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fire-blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1279630360465997038}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Damage Text Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}

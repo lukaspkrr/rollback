@@ -16296,6 +16296,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7824559328771882712, guid: a34b8d208480a76418d5f8a872a1cbd5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824559328810241006, guid: a34b8d208480a76418d5f8a872a1cbd5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404403750227673557, guid: a34b8d208480a76418d5f8a872a1cbd5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8404403751203670776, guid: a34b8d208480a76418d5f8a872a1cbd5,
         type: 3}
       propertyPath: m_Name
@@ -16355,6 +16370,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404403751477720176, guid: a34b8d208480a76418d5f8a872a1cbd5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404403751477720176, guid: a34b8d208480a76418d5f8a872a1cbd5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404403751477720178, guid: a34b8d208480a76418d5f8a872a1cbd5,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a34b8d208480a76418d5f8a872a1cbd5, type: 3}

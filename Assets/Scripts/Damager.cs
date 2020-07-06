@@ -23,7 +23,7 @@ public class Damager : MonoBehaviour
 
    private void OnTriggerEnter2D(Collider2D other){
     Damageable damageable = other.GetComponent<Damageable>();
-       if(damageable != null){
+       if(damageable != null &&(gameObject.layer !=other.gameObject.layer)){
            DoDamage(damageable);
        }
    }

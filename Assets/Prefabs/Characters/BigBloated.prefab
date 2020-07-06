@@ -18,8 +18,8 @@ GameObject:
   - component: {fileID: 683440691902677643}
   - component: {fileID: 683440691902677636}
   - component: {fileID: 2581104946061868867}
-  m_Layer: 8
-  m_Name: BigBloated 1
+  m_Layer: 10
+  m_Name: BigBloated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,7 +248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2581104946196202055}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Damage Text Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}

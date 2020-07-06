@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1744049665695535597}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Damage Text Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,8 +48,8 @@ GameObject:
   - component: {fileID: 2382668412268432663}
   - component: {fileID: 8758757235136272442}
   - component: {fileID: 4860384179094565088}
-  m_Layer: 8
-  m_Name: Centipede 1
+  m_Layer: 10
+  m_Name: Centipede
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
