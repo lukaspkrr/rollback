@@ -8,6 +8,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
     // Start is called before the first frame update
     public SpriteRenderer rendererRef;
+    public float moveSpeed;
     public float jumpForce  = 7f;
     bool isGrounded = false;
     public Transform isGroundedChecker; 
@@ -54,12 +55,12 @@ public class Player : MonoBehaviour {
     void Move() {
         Vector3 pos = transform.position;
         if(Input.GetKey(KeyCode.RightArrow)){
-            pos.x += 0.1f;
+            pos.x += moveSpeed * Time.deltaTime;
             rendererRef.flipX = false;
             isRunning = true;
             directionFoward = true;
         } else if (Input.GetKey(KeyCode.LeftArrow)){
-            pos.x += -0.1f;
+            pos.x += moveSpeed * Time.deltaTime * -1;
             rendererRef.flipX = true;
             isRunning = true;
             directionFoward = false;

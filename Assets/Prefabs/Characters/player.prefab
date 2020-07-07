@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rendererRef: {fileID: 6358930944046245146}
+  moveSpeed: 5
   jumpForce: 25
   isGroundedChecker: {fileID: 6358930943718447957}
   checkGroundRadius: 0.05
@@ -248,8 +249,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000826279, y: -0.030452935}
-  m_Size: {x: 0.099744976, y: 0.25089183}
+  m_Offset: {x: -0.0030633558, y: -0.030452935}
+  m_Size: {x: 0.123083055, y: 0.25089183}
   m_Direction: 0
 --- !u!114 &6358930944046245151
 MonoBehaviour:
