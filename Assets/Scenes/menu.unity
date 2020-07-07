@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -604,7 +604,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700412756}
-  m_LocalRotation: {x: -0, y: -0, z: 0.92706233, w: 0.3749073}
+  m_LocalRotation: {x: -0, y: -0, z: 0.92613447, w: 0.3771935}
   m_LocalPosition: {x: 6.707, y: 2.385, z: -0.00007393244}
   m_LocalScale: {x: 0.3231388, y: 0.3231388, z: 0.3231388}
   m_Children: []
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 46.5
   m_PointLightOuterAngle: 62.83
   m_PointLightInnerRadius: 1
-  m_PointLightOuterRadius: 15.827372
+  m_PointLightOuterRadius: 19.754642
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5

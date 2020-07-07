@@ -10,7 +10,6 @@ public class MoveMobs : MonoBehaviour
     public SpriteRenderer sr;
     private float durationRun = 2f;
     private bool toRight = true;
-    private float lastTime = 0;
     private float timer = 0f;
     void Update()
     {
