@@ -16,7 +16,7 @@ public class PlayerHealth : Damageable
 
     IEnumerator timeOut() {
         yield return new WaitForSeconds(2);
-         SceneManager.LoadScene(0);   
+         SceneManager.LoadScene(1);   
     }
      public override void ReduceLifeBar(int currentHealth, int maxHealth){
          anim.SetBool("hit", true);

@@ -85,7 +85,6 @@ public class FlyBoss : MonoBehaviour
 
     void flyRight()
     {
-        Debug.Log(Mathf.Sin(Time.time * frequency) * magnitude);
         pos += transform.right * Time.deltaTime * speed;
         transform.position = pos + transform.up * Mathf.Sin(Time.time * frequency) * magnitude;
     }
